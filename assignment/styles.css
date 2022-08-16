@@ -1,17 +1,64 @@
-header {
+.headStyle {
     background-color: blue;
     color: white;
     text-align: center;
     padding: 5px 0;
 }
 
-main {
+.mainStyle {
     background-color: lightgrey;
     padding: 1em;
 }
 
-body {
+.backgroundStyle {
+    display: inline-block;
+    position: absolute;
     background-image: url("record.png");
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    width: 25vw;
+    height: 50vh;
+    z-index: -1;
+    top: 0;
+    animation: spinBackground 7s linear infinite;
+}
+
+body {
     margin: 0;
+}
+
+@keyframes spinBackground {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+#circle1,
+#circle5 {
+    left: 0;
+}
+
+#circle2,
+#circle6 {
+    left: 25%;
+}
+
+#circle3,
+#circle7 {
+    left: 50%;
+}
+
+#circle4,
+#circle8 {
+    left: 75%;
+}
+
+#circle5,
+#circle6,
+#circle7,
+#circle8 {
+    top: 50%;
 }
